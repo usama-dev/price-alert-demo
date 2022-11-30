@@ -8,7 +8,7 @@ const userSchema = new Schema({
     {
       type: Schema.Types.ObjectId,
       unique: true,
-      ref: "Product",
+      ref: "Product", // For populating the Products from the IDs
     },
   ],
 });

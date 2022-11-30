@@ -8,7 +8,6 @@ import SubscribedProductsComponent from "./pages/SubscribedProducts";
 import AdminComponent from "./pages/Admin";
 import HomeComponent from "./pages/Home";
 import NavBarComponent from "./components/NavBar";
-
 import Container from "react-bootstrap/Container";
 
 import "primereact/resources/themes/lara-light-indigo/theme.css"; //theme

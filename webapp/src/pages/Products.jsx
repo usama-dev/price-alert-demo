@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 import Row from "react-bootstrap/Row";
-
 import CardComponent from "../components/Card";
 import SpinnerComponent from "../components/Spinner";
 

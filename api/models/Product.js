@@ -15,10 +15,12 @@ const productSchema = new Schema(
 );
 const Product = mongoose.model("Product", productSchema);
 
+// Setting up the event listner to any collection update:
 Product.watch(
   [
     { $match: { operationType: "update" } },
     {
+      // Projection for readability
       $project: {
         meta: "$fullDocument",
         newPrice: "$fullDocument.price",

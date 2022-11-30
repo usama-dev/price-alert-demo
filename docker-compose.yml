@@ -1,11 +1,13 @@
 version: "3.8"
 services:
+  # MongoDB service with single node replica set
   mongodb:
     image: mongo
     ports:
       - 27017:27017
     entrypoint: ["/usr/bin/mongod","--bind_ip_all","--replSet","rs0"]
 
+  # MongoDB mock server for initializing replica set & generating data
   mongosetup:
     image: mongo
     depends_on:
@@ -13,9 +15,9 @@ services:
     restart: "no"
     volumes:
       - ./mongo-init.js:/mongo-init.js
-    # entrypoint: [ "bash", "-c", "sleep 10 && mongosh 'mongodb://mongodb:27017' --eval 'rs.initiate()' && sleep 10 && mongosh 'mongodb://mongodb:27017' mongo-init.js"]  
-    entrypoint: [ "bash", "-c", "mongosh 'mongodb://mongodb:27017' --eval 'rs.initiate()' && mongosh 'mongodb://mongodb:27017' mongo-init.js"]  
+    entrypoint: [ "bash", "-c", "mongosh 'mongodb://mongodb:27017' --eval 'rs.initiate()' && mongosh 'mongodb://mongodb:27017' mongo-init.js"] 
 
+  # Backend
   api:
     build: ./api
     environment:
@@ -29,6 +31,7 @@ services:
       - mongosetup
     restart: on-failure
 
+  # Frontend
   webapp:
     build: ./webapp
     ports:

@@ -10,7 +10,6 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
 import { Toast } from "primereact/toast";
-
 import SpinnerComponent from "../components/Spinner";
 
 const ProductDetailComponent = () => {
