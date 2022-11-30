@@ -90,7 +90,50 @@ const homeComponent = () => {
           https://ethereal.email/messages
         </a>
       </p>
-      <h2 className="text-center pb-5">That&apos;s all!✌</h2>
+      <h4>Steps to check functionality 🪜</h4>
+      <ol>
+        <li>
+          Go to <Link to="/products">Products</Link> page
+        </li>
+        <li>
+          Select any product e.g <i>Cycle</i>
+        </li>
+        <li>
+          Click on the <b>Get Price Alerts for this Product!</b> button
+        </li>
+        <li>Enter any random name & email</li>
+        <li>
+          Go to <Link to="/subscribedusers">Subscribed Users</Link> page to see
+          if you get the same registered name with email
+        </li>
+        <li>
+          OPTIONAL: You can go to{" "}
+          <Link to="/subscribedproducts">Subscribed Products</Link> page and
+          enter the email to verify the subscribed product(s)
+        </li>
+        <li>
+          Now go to <Link to="/admin">Admin</Link> page and update the price
+          (the same product you subscribed to in step 3).{" "}
+          <i>
+            {" "}
+            e.g click on the pencil button for Cycle and decrease the price from
+            $150 to $140
+          </i>
+        </li>
+        <li>
+          As the price decreased more than $1 you should receive the email in
+          ethereal messages{" "}
+          <a href="https://ethereal.email/messages">
+            https://ethereal.email/messages
+          </a>{" "}
+          <i>(make sure you are logged in!)</i>
+        </li>
+        <li>
+          Every user who have subscribed to a specific product will get the
+          notification on price drop
+        </li>
+      </ol>
+      <h2 className="text-center pt-5 pb-5">That&apos;s all!✌</h2>
     </div>
   );
 };
