@@ -16,7 +16,7 @@ and bundled together with docker compose to make everything run smoothly.
 
 The current Architecture of the App visualized:
 
-![docker-compose-architecture](images\main.png)
+![docker-compose-architecture](images/main.png)
 
 ### Event-Driven Pattern:
 The backend of the app has been designed in a modular way by using Event-Driven pattern in the main price updation logic by using [MongoDB Change Streams](https://www.mongodb.com/docs/manual/changeStreams/). 
@@ -26,7 +26,7 @@ Even though the current services can be deployed seperately to achieve some kind
 
 Something like this:
 
-![docker-compose-architecture](images\scale.png)
+![docker-compose-architecture](images/scale.png)
 
 ## Deployments
 The complete App can be deployed locally as well as on the cloud.
