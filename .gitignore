@@ -1,0 +1,4 @@
+node_modules
+_play_files
+dist
+coverage
